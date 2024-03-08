@@ -1,0 +1,23 @@
+version: 0.2
+
+phases:
+  install:
+    commands:
+      - echo Installing dependencies...
+      - npm install
+  pre_build:
+    commands:
+      - echo Pre-build phase...
+  build:
+    commands:
+      - echo Building the React app...
+      - npm run build
+  post_build:
+    commands:
+      - echo Post-build phase...
+      # Add any post-build commands here (e.g., upload build artifacts to S3)
+
+artifacts:
+  files:
+    - '**/*'
+  base-directory: 'build' # The output directory of the build process
