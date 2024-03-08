@@ -15,7 +15,7 @@ phases:
   post_build:
     commands:
       - echo Post-build phase...
-      - aws s3 sync build/ s3://gwot-gigs-main --delete
+      - aws s3 sync build/ s3://gwot-gigs-main 
       # Add any post-build commands here (e.g., upload build artifacts to S3)
 
 artifacts:
